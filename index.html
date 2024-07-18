@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/d40adb1550.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Photo Feed - Grid</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid mx-auto" style="width: 60%;">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+        aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <div class="navbar-nav me-auto mb-2 mb-lg-0"></div>
+        <form class="d-flex" role="search">
+          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newPost">
+            Create New Post
+          </button>
+          <div class="modal fade" id="newPost" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="modalLabel">Create a New Post</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <label for="caption" class="form-label">Caption</label>
+                  <textarea class="form-control" id="caption" rows="3"></textarea><br>
+                  <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-camera"></i></button>
+                  <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-location-dot"></i></button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-success">Publish</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          &nbsp;
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa-solid fa-gear"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Accessability</a></li>
+              <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item text-danger" id="log-out" href="#">Log Out</a></li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <ul class="nav nav-tabs mb-3 justify-content-center" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+      <div class="container-fluid d-grid gap-3" style="width: 60%;">
+        <div class="row">
+          <div class="col"><img src="https://cdn.pixabay.com/photo/2014/09/29/22/21/elephants-466602_640.jpg" class="rounded" style="width:100%"></div>
+          <div class="col"><img src="https://cdn.pixabay.com/photo/2012/03/04/00/09/lions-21787_640.jpg" class="rounded" style="width:100%"></div>
+          <div class="col"><img src="https://cdn.pixabay.com/photo/2015/01/07/11/31/tigers-591359_640.jpg" class="rounded" style="width:100%"></div>
+        </div>
+        <div class="row">
+          <div class="col"><img src="https://cdn.pixabay.com/photo/2018/01/03/23/20/mammal-3059457_640.jpg" class="rounded" style="width:100%"></div>
+          <div class="col"><img src="https://cdn.pixabay.com/photo/2020/02/11/09/22/bear-4838870_640.jpg" class="rounded" style="width:100%"></div>
+          <div class="col"><img src="https://cdn.pixabay.com/photo/2014/11/03/17/40/leopard-515509_640.jpg" class="rounded" style="width:100%"></div>
+        </div>
+        <div class="row mb-3">
+          <div class="col"><img src="https://cdn.pixabay.com/photo/2021/03/03/14/55/rhino-6065480_640.jpg" class="rounded" style="width:100%"></div>
+          <div class="col"><img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg" class="rounded" style="width:100%"></div>
+          <div class="col"><img src="https://cdn.pixabay.com/photo/2022/01/22/10/02/bird-6956747_640.jpg" class="rounded" style="width:100%"></div>
+        </div>
+      </div>
+  </div>
+      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+        <div class="container-fluid d-grid gap-3" style="width: 40%;">
+          <!-- Photo #1 -->
+          <div class="card">
+              <div class="card-header">
+                  <div class="row">
+                      <div class="col">
+                          Elefante
+                      </div>
+                      <div class="col text-end">
+                          18/07/24
+                      </div>
+                  </div>
+              </div>
+              <img src="https://cdn.pixabay.com/photo/2014/09/29/22/21/elephants-466602_640.jpg" class="card-img-top">
+              <div class="card-body">
+                  <p class="card-text"><strong>9999 likes</strong></p>
+                  <p class="card-text">Los elefantes o elefántidos (Elephantidae) son una familia de mamíferos placentarios del orden proboscideos.Antiguamente se clasificaban,junto con otros mamíferos de piel gruesa,en el orden,ahora inválido,de los paquidermos (Pachydermata).Existen hoy en día tres especies y diversas subespecies.Entre los géneros extintos de esta familia destacan los mamuts.</p>
+              </div>
+          </div>
+          <!-- Photo #2 -->
+          <div class="card">
+              <div class="card-header">
+                  <div class="row">
+                      <div class="col">
+                          Leona
+                      </div>
+                      <div class="col text-end">
+                          19/07/24
+                      </div>
+                  </div>
+              </div>
+              <img src="https://cdn.pixabay.com/photo/2012/03/04/00/09/lions-21787_640.jpg" class="card-img-top">
+              <div class="card-body">
+                  <p class="card-text"><strong>5250 likes</strong></p>
+                  <p class="card-text">Son catalogadas como el símbolo de la vigilancia,fuerza y el instinto protector.La característica física que las diferencia de los machos es que no cuentan con melena.El comportamiento que expresan en cuanto a la protección de sus crías es lo que las caracteriza.</p>
+              </div>
+          </div>
+          <!-- Photo #3 -->
+          <div class="card">
+              <div class="card-header">
+                  <div class="row">
+                      <div class="col">
+                          Tigre
+                      </div>
+                      <div class="col text-end">
+                          20/07/24
+                      </div>
+                  </div>
+              </div>
+              <img src="https://cdn.pixabay.com/photo/2015/01/07/11/31/tigers-591359_640.jpg" class="card-img-top">
+              <div class="card-body">
+                  <p class="card-text"><strong>625 likes</strong></p>
+                  <p class="card-text">El tigre (Panthera tigris) es una de las especies de la subfamilia de los panterinos (familia Felidae) pertenecientes al género Panthera.Se encuentra solamente en el continente asiático;es un predador carnívoro y es la especie de félido más grande del mundo junto con el león pudiendo alcanzar ambos un tamaño comparable al de los fósiles de félidos de mayor tamaño.</p>
+              </div>
+          </div>
+          <!-- Photo #4 -->
+          <div class="card">
+              <div class="card-header">
+                  <div class="row">
+                      <div class="col">
+                          Lobo
+                      </div>
+                      <div class="col text-end">
+                          21/07/24
+                      </div>
+                  </div>
+              </div>
+              <img src="https://cdn.pixabay.com/photo/2018/01/03/23/20/mammal-3059457_640.jpg" class="card-img-top">
+              <div class="card-body">
+                  <p class="card-text"><strong>99 likes</strong></p>
+                  <p class="card-text">El lobo (Canis lupus) es una especie de mamífero placentario del orden de los carnívoros.El primer registro fósil data de hace ochocientos mil años.Los lobos son originarios de América del Norte y Eurasia.</p>
+              </div>
+          </div>
+          <!-- Photo #5 -->
+          <div class="card">
+              <div class="card-header">
+                  <div class="row">
+                      <div class="col">
+                          Oso
+                      </div>
+                      <div class="col text-end">
+                          22/07/24
+                      </div>
+                  </div>
+              </div>
+              <img src="https://cdn.pixabay.com/photo/2020/02/11/09/22/bear-4838870_640.jpg" class="card-img-top">
+              <div class="card-body">
+                  <p class="card-text"><strong>10.000 likes</strong></p>
+                  <p class="card-text">Los osos o úrsidos (Ursidae) son una familia de mamíferos omnívoros.Son animales de gran tamaño, generalmente omnívoros,ya que,a pesar de su temible dentadura,comen frutos,raíces e insectos,además de carne.Con sus pesados cuerpos y sus poderosas mandíbulas,los osos se encuentran entre los mayores carnívoros que viven en la Tierra.</p>
+              </div>
+          </div>
+          <!-- Photo #6 -->
+          <div class="card">
+              <div class="card-header">
+                  <div class="row">
+                      <div class="col">
+                          Leopardo
+                      </div>
+                      <div class="col text-end">
+                          23/07/24
+                      </div>
+                  </div>
+              </div>
+              <img src="https://cdn.pixabay.com/photo/2014/11/03/17/40/leopard-515509_640.jpg" class="card-img-top">
+              <div class="card-body">
+                  <p class="card-text"><strong>3500 likes</strong></p>
+                  <p class="card-text">El leopardo(Panthera pardus) es un mamífero de la familia de los félidos.Al igual que tres de los demás félidos del género Panthera: el león,el tigre y el jaguar,están caracterizados por una modificación en el hueso hioides que les permite rugir.También se lo conoce como pantera parda y,cuando presenta un pelaje completamente oscuro como pantera negra (melánico).</p>
+              </div>
+          </div>
+          <!-- Photo #7 -->
+          <div class="card">
+              <div class="card-header">
+                  <div class="row">
+                      <div class="col">
+                          Rinoceronte
+                      </div>
+                      <div class="col text-end">
+                          24/07/24
+                      </div>
+                  </div>
+              </div>
+              <img src="https://cdn.pixabay.com/photo/2021/03/03/14/55/rhino-6065480_640.jpg" class="card-img-top">
+              <div class="card-body">
+                  <p class="card-text"><strong>950 likes</strong></p>
+                  <p class="card-text">Los rinocerótidos (Rhinocerotidae,del latín tardío rhinocĕron,-ōntis, este del latín rhinocĕros,-ōtis,y este del griego ρινόκερως (rinókerōs) ρίς,ρινός (ris, rinós),"nariz" y κερος (keros),"cuerno"),conocidos con el nombre de rinocerontes,son una familia de mamíferos placentarios del suborden ceratomorfos perteneciente al orden de los perisodáctilos.</p>
+              </div>
+          </div>
+          <!-- Photo #8 -->
+          <div class="card">
+              <div class="card-header">
+                  <div class="row">
+                      <div class="col">
+                          Cabra montes
+                      </div>
+                      <div class="col text-end">
+                          25/07/24
+                      </div>
+                  </div>
+              </div>
+              <img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg" class="card-img-top">
+              <div class="card-body">
+                  <p class="card-text"><strong>10 likes</strong></p>
+                  <p class="card-text">La cabra montés o íbice ibérico (Capra pyrenaica) es una de las especies de bóvidos del género Capra que existen en Europa.Antiguamente repartido por el sur de Francia,Andorra,España y Portugal,la cabra montés es un endemismo que actualmente se encuentra principalmente en las áreas montañosas de España y del norte de Portugal.</p>
+              </div>
+          </div>
+          <!-- Photo #9 -->
+          <div class="card mb-3">
+              <div class="card-header">
+                  <div class="row">
+                      <div class="col">
+                          Águila imperial
+                      </div>
+                      <div class="col text-end">
+                          26/07/24
+                      </div>
+                  </div>
+              </div>
+              <img src="https://cdn.pixabay.com/photo/2022/01/22/10/02/bird-6956747_640.jpg" class="card-img-top">
+              <div class="card-body">
+                  <p class="card-text"><strong>6000 likes</strong></p>
+                  <p class="card-text">El águila imperial ibérica (Aquila adalberti) es una especie de ave accipitriforme de la familia Accipitridae.Es una de las aves endémicas de la península ibérica.Hasta no hace mucho se la consideraba una subespecie del águila imperial (Aquila heliaca).</p>
+              </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
